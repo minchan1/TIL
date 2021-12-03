@@ -64,7 +64,7 @@
 
 ### 초기 세팅시 입력
 
-```
+```python
 $ git init
 $ touch README.md
 $ git add README.md
@@ -82,20 +82,20 @@ $ git commit -m 'first commit'
 
 - 초기화 시점에 1회 입력
 
-```
+```python
 $ git init
 ```
 
 - 작업하며 계속 입력
 
-```
+```python
 $ git add <filename>
 $ git commit -m 'MESSAGE'
 ```
 
 - 모니터링 명령어
 
-```
+```python
 $ git status   # 현재 상황
 $ git log      # commit 로그
 ```
@@ -139,14 +139,20 @@ $ git log      # commit 로그
 
 ### 원격 저장소 (remote repo) 등록하기
 
-```
+```python
 $ git remote add origin <URL>
 ```
 
 ### 원격 저장소에 PUSH 하기
 
-```
+```python
 $ git push -u origin master
+```
+
+### 원격 저장소 확인하기
+
+```python
+$ git remote -v
 ```
 
 

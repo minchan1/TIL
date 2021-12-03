@@ -62,16 +62,24 @@
 
 
 
-### 초기 세팅시 입력
+### 프로젝트 초기화시 세팅
 
 ```python
-$ git init
-$ touch README.md
-$ git add README.md
+$ mkdir pjt
+$ cd pjt
+  # *** README 파일 & .gitignore 생성 ***
+$ touch README.md  .gitignore
+  # => gitignore.io에 접속, 필요한내용 복붙
+$ git init # => 초기화
 $ git config --global user.name '내이름'
 $ git config --global user.email 'github에서 쓸 메일주소'
 $ cat ~/.gitconfig # => 입력한대로 잘 나오는지 확인
 $ git commit -m 'first commit'
+ # remote 저장소 생성 @ github.com
+ # 생성한 원격 저장소 등록
+$ git remote add origin <URL>
+ # 지금까지의 commit push 하기
+$ git push origin master
 ```
 
 

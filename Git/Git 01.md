@@ -1,4 +1,6 @@
-# TIL
+# Git 01
+
+
 
 ## Git & Git Hub 01
 
@@ -167,5 +169,4 @@ $ git remote -v
 ``` sh 
 $ git clone <URL>
 ```
-
 

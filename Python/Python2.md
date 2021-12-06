@@ -101,7 +101,71 @@
 
 - 문자열 연산하기
 
+  1. 문자열 더해서 연결하기
   
+     ```python
+     >>> head = "Python"
+     >>> tail = " is fun!"
+     >>> head + tail
+     'Python is fun!'
+     ```
+  
+  2. 문자열 곱하기
+  
+     ```python
+     >>> a = "python"
+     >>> a * 2
+     'pythonpython'
+     ```
+  
+  3. 문자열 길이 구하기
+  
+     ```python
+     >>> a = "Life is too short"
+     >>> len(a)
+     17
+     ```
+
+
+
+### 인덱싱과 슬라이싱
+
+- 인덱싱(indexing)이란 무엇인가를 가리킨다는 의미
+
+- 슬라이싱(Slicing)은 무엇인가를 잘라낸다는 의미
+
+- 파이썬은 숫자를 0부터 센다.
+
+  ```python
+  >>> a = "Life is too short, You need Python"
+  >>> a[3]
+  'e'  # 0부터 시작
+  a[0]:'L', a[1]:'i', a[2]:'f', a[3]:'e', a[4]:' ', ...
+  ```
+
+- 문자열을 뒤에서부터 읽을때는 마이너스(-) 기호
+
+  ```python
+  >>> a[-2]
+  'o'
+  >>> a[-5]
+  'y'
+  ```
+
+- 문자열 슬라이싱의 활용?
+
+  ```python
+  >>> a = "Life is too short, You need Python"
+  >>> b = a[0] + a[1] + a[2] + a[3]
+  >>> b
+  'Life'
+  >>> a[0:4] # 끝번호는 포함하지 않는다.
+  'Life'
+  ```
+
+  
+
+
 
 
 

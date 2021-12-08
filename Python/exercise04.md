@@ -6,6 +6,16 @@
 
 - 주어진 자연수가 홀수인지 짝수인지 판별해 주는 함수(is_odd)를 작성해 보자.
 
+- ```python
+  n = int(input())
+  if n%2 == 0 :
+      print('even')
+  if not n%2 == 0 :
+      print('odd')       
+  ```
+
+- 
+
 
 
 
@@ -15,7 +25,19 @@
 ## Q2
 
 - 입력으로 들어오는 모든 수의 평균 값을 계산해 주는 함수를 작성해 보자. (단 입력으로 들어오는 수의 개수는 정해져 있지 않다.)
+
 - len 함수를 사용해보자
+
+- ```python
+  a = list(map(int,input().split()))
+  n = len(a)
+  sum_ = 0
+  for i in range(n) :
+      sum_ += a[i]
+  print(sum_/n)
+  ```
+
+- 
 
 
 
@@ -47,6 +69,19 @@
 
 - int 함수를 사용해보자.
 
+- ```python
+  # 입력값을 숫자로 변환하지 않고 문자로 더해서 오류가 생김
+  input1 = int(input("첫번째 숫자를 입력하세요:"))
+  input2 = int(input("두번째 숫자를 입력하세요:"))
+  
+  total = input1 + input2
+  print("두 수의 합은 %s 입니다" % total)
+  ```
+
+- 
+
+
+
 
 
 
@@ -54,10 +89,20 @@
 ## Q4
 
 - 다음 중 출력 결과가 다른 것 한 개를 골라 보자.
+
   1. `print("you" "need" "python")`
   2. `print("you"+"need"+"python")`
   3. `print("you", "need", "python")`
   4. `print("".join(["you", "need", "python"]))`
+
+- ```python
+  # 1. youneedpython
+  # 2. youneedpython
+  # 3. you need python
+  # 4. youneedpython
+  ```
+
+- 
 
 
 

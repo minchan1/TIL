@@ -671,7 +671,7 @@
 #### full outer join
 
 - ```python
-  pd.merge(left=user_usage, right=user_device, on='use_id', how='left')
+  pd.merge(left=user_usage, right=user_device, on='use_id', how='outer')
   ```
 
 

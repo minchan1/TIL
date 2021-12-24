@@ -2,13 +2,117 @@
 
 - 교재(p.87) 2.3.3 Django 설치하기
 
+- VScode 에서는
+
+  - 파이썬 파일을 선택한 이후 인터프리터를 설치한 가상환경 선택
+  - 터미널 실행 후 다음과 같이 보여져야 한다
+
+- ```
+  Microsoft Windows [Version 10.0.18362.959]
+  (c) 2019 Microsoft Corporation. All rights reserved.
+  
+  C:\IJH\workspace>C:/ProgramData/Anaconda3/Scripts/activate
+  
+  (base) C:\IJH\workspace>conda activate multicampus
+  
+  (multicampus) C:\IJH\workspace>
+  -------------
+  가상환경이 선택된 이후에 명령어를 실행을 해야함
+  ```
 
 
 
 
 
+## 터미널에서 가상환경 선택
+
+- 가상환경 목록 확인
+
+- ```
+  (minchan1) C:\Users\alfls\workspace>conda env list
+  가상환경 목록 확인 명령어
+  
+  # conda environments:
+  #
+  base                     C:\ProgramData\Anaconda3
+  minchan1              *  C:\Users\alfls\.conda\envs\minchan1
+  -------            -----  ---------------------------------
+  가상환경 이름     현재 선택된 환경   가상환경이 설치된 경로
+  ```
+
+- 가상환경 선택
+
+- ```
+  (minchan1) C:\Users\alfls\workspace>conda activate minchan1
+  ```
+
+- 주의
+
+  - 설치는 명령어 기반이기 때문에 명령어를 실행할 때의 가상환경이 중요
+  - 다른 가상환경에 설치되지 않도록 주의
 
 
+
+## 파이썬 모듈 (패키지) 설치
+
+- 어떤걸 사용해도 문제 x
+  1. pip
+  2. conda
+
+
+
+### pip를 이용한 패키지 관리
+
+- ```
+  # 설치된 모듈(패키지) 확인
+  prompt> pip list
+  
+  # pip를 이용한 설치
+  prompt> pip install [설치할 모듈(패키지) 이름]
+  
+  # pip를 이용한 모듈(패키지) 업그레이드
+  prompt> pip install --upgrade [업그레이드할 모듈(패키지) 이름]
+  ```
+
+
+
+### conda를 이용한 패키지 관리
+
+- ```
+  # 설치된 모듈(패키지) 확인
+  prompt> conda list
+  
+  # 설치
+  prompt> conda install [설치할 모듈(패키지) 이름]
+  ```
+
+
+
+## 장고 설치
+
+- pip 업그레이드
+
+  - pip는 파이썬의 패키지 관리자이다
+  - 항상 최신버전으로 유지해주는게 좋다
+  - 명령어가 update가 아닌 upgrade 라는것에 주의
+  - 권한 문제가 발생할 수 있지만 설치에는 문제가 없음
+
+- ```
+  # pip 업그레이드
+  prompt> pip install --upgrade pip
+  
+  # 장고 설치
+  prompt> pip install django
+  
+  # 설치 확인
+  prompt> pip list
+  ...
+  django
+  ...
+  # 목록에서 django 이름이 보이면 된다
+  ```
+
+  
 
 # 장고 예제 따라해보기
 

@@ -129,7 +129,7 @@
 - 프로젝트 생성하는 방법
 
 - ```
-  prompt> django-amdin startproject 프로젝트이름
+  prompt> django-admin startproject 프로젝트이름
   ```
 
   
@@ -640,6 +640,79 @@
   ```
 
   
+
+
+
+## static
+
+- 정적 파일 관리
+  - 장고에서는 정적인 파일을 관리하는 통합된 환경을 제공
+  - CSS, 이미지, 등등
+
+
+
+### static 폴더 설정
+
+- settings.py
+
+- ```
+  STATIC_URL = 'static/'
+  
+  # 아래처럼 static 폴더에 대한 경로를 설정
+  STATICFILES_DIRS = [
+      BASE_DIR / 'static',
+  ]
+  ```
+
+- BASE_DIR 은 프로젝트폴더 가 된다
+
+  - 프로젝트폴더 에 static 폴더를 하나 만들어 준다
+  - /프로젝트폴더/static
+
+- 폴더가 생성되었으면 HTML에 필요한 CSS 파일을 해당 폴더로 복사해줌
+
+
+
+### CSS 설정
+
+- 템플릿 태그를 사용해서 지정된 static 폴더로부터 css 파일을 임포트 한다
+
+- ```
+   {% load static %}
+   <link type='text/css' rel='stylesheet' href='{% static "bootstrap.min.css" %}' />
+   <link type='text/css' rel='stylesheet' href='{% static "bootstrap-theme.min.css" %}' />
+   <link type='text/css' rel='stylesheet' href='{% static "list.css" %}' />
+  ```
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

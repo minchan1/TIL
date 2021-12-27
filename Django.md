@@ -684,6 +684,78 @@
    <link type='text/css' rel='stylesheet' href='{% static "list.css" %}' />
   ```
 
+
+
+
+
+## 모델
+
+- 게시글을 저장하기 위한 테이블을 정의
+
+- ```
+  from django.db import models
+  
+  # Create your models here.
+  # ORM (Object Relation Mapping)
+  
+  class board( models.Model ):
+      createDate = models.DateField()
+      writer = models.CharField(max_length=128)
+      subject = models.CharField(max_length=255)
+      content = models.TextField()
+  ```
+
+- 장고에서는 클래스가 곧 테이블이 된다
+
+  - 작성된 클래스를 DB에 반영해준다
+
+- ```
+  prompt> python manage.py makemigrations 앱이름
+  
+  prompt> python manage.py migrate
+  ```
+
+
+
+### 모델 테스트
+
+- prompt> python manage.py shell
+
+- ```
+  >>> from board     .      models      import        Board
+          -------        -----------               ----------
+          package           module                 models.py에 정의된 Board 클래스
+  
+  >>> import datetime
+  >>> b = Board( createDate=datetime.date.today(), writer='글 작성자', subject='글 제목', content='글 내용')
+  
+  >>> b.save()
+  ------------
+  생성된 객체를 테이블에 저장
+  
+  >>> Board.objects.all()
+  ------------------------
+  테이블에 저장된 모든 row를 객체형태로 반환
+  
+  <QuerySet [<board: board object (1)>, <board: board object (2)>, <board: board object (3)>]>
+  ------------------------------------------------------------------------
+  쿼리셋 타입의 객체가 반환
+  테이블 내의 각 row는 하나의 Board 객체로 매핑이 된다.
+  
+  >>> for b in Board.objects.all():
+    print(b.subject)
+  -----------------------------------------
+  쿼리셋 객체는 이터레이블 객체
+  
+  >>> Board.objects.filter(id=1)
+  ------------------------------
+  쿼리셋 객체를 반환
+  
+  >>> Board.objects.get(id=1)
+  ------------------------------
+  Board 타입의 객체 하나를 반환
+  ```
+
   
 
 

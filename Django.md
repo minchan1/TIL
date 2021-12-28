@@ -672,9 +672,15 @@
 
 
 
+
+
 ### 장고에서의 데이터 삭제
 
 - ```
+  prompt> from my_to_do_app.models import Todo
+  prompt> obj = Todo.objects.get(id=1)
+  prompt> obj.delete()
+  prompt> Todo.objects.all()
   ```
 
 
@@ -683,11 +689,12 @@
 
 ### 장고에서의 데이터 수정
 
-
-
-
-
-
+- ```
+  prompt> from my_to_do_app.models import Todo
+  prompt> obj = Todo.objects.get(id=1)
+  prompt> obj.content = '바꿔주고'
+  prompt> obj.save()
+  ```
 
 
 
